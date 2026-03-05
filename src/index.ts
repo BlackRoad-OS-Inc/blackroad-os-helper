@@ -3770,17 +3770,19 @@ app.get('/fusion/:id', async (c) => {
   const fusion = FUSION_FORMS[idx];
   const state = await initializeOrchestra(c.env);
   const [agent1, agent2] = fusion.components;
+  const agent1State = state.agents[agent1] ?? {};
+  const agent2State = state.agents[agent2] ?? {};
 
   return c.json({
     id: `fusion-${idx}`,
     ...fusion,
     components: {
       [agent1]: {
-        ...state.agents[agent1],
+        ...agent1State,
         instrument: AGENT_INSTRUMENTS[agent1]
       },
       [agent2]: {
-        ...state.agents[agent2],
+        ...agent2State,
         instrument: AGENT_INSTRUMENTS[agent2]
       }
     },
