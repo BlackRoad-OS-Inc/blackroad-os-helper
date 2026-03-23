@@ -1,3 +1,11 @@
+# blackroad-os-helper
+
+> Helper agent - Second Responder for help signals
+
+Part of the [BlackRoad OS](https://blackroad.io) ecosystem — [BlackRoad-OS-Inc](https://github.com/BlackRoad-OS-Inc)
+
+---
+
 # ⚠️ DEPRECATED - This repository has been archived
 
 > **This repository is deprecated and read-only.**
